@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        /* Style for the arrow */
+        #arrow {
+            display: none;
+            position: absolute;
+            top: calc(50% + 60px); /* Position below the button */
+            left: calc(50% - 60px); /* Center the arrow */
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            color: rgb(233, 48, 48);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="header_text">Aaminah, will you be my girlfriend?</h1>
+        <div class="gif_container">
+            <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDdtZ2JiZDR0a3lvMWF4OG8yc3p6Ymdvd3g2d245amdveDhyYmx6eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/cLS1cfxvGOPVpf9g3y/giphy.gif" alt="Cute animated illustration">
+        </div>
+        <div class="buttons">
+            <button class="btn" id="yesButton" onclick="nextPage()">Yes</button>
+            <button class="btn" id="noButton" onclick="moveButton()">No</button>
+            <div id="arrow">➡️ Just click it!</div>
+        </div>
+    </div>
+
+    <script>
+        let noClickCount = 0;
+
+        function nextPage() {
+            window.location.href = "yes.html";
+        }
+
+        function moveButton() {
+            noClickCount++;
+            if (noClickCount >= 3) {
+                const arrow = document.getElementById('arrow');
+                arrow.style.display = 'block';
+                arrow.style.top = `${document.getElementById('yesButton').offsetTop + 80}px`; // Below the button
+                arrow.style.left = `${document.getElementById('yesButton').offsetLeft + (document.getElementById('yesButton').offsetWidth / 2)}px`; // Center it under the button
+            }
+            const noButton = document.getElementById('noButton');
+            const x = Math.random() * (window.innerWidth - noButton.offsetWidth);
+            const y = Math.random() * (window.innerHeight - noButton.offsetHeight);
+            noButton.style.position = 'absolute';
+            noButton.style.left = `${x}px`;
+            noButton.style.top = `${y}px`;
+        }
+    </script>
+</body>
+</html>
