@@ -39,14 +39,14 @@ body {
 .btn {
     background-color: #ffffff;
     color: rgb(233, 48, 48);
-    padding: 30px 60px; /* Increased padding for much bigger buttons */
+    padding: 50px 100px; /* Significantly increased padding for huge buttons */
     text-align: center;
     display: inline-block;
-    font-size: 22px; /* Increased font size */
-    margin: 15px; /* Spacing between buttons */
+    font-size: 36px; /* Increased font size for huge buttons */
+    margin: 20px; /* Spacing between buttons */
     cursor: pointer;
     border: none;
-    border-radius: 20px; /* More rounded corners */
+    border-radius: 30px; /* More rounded corners */
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
@@ -70,8 +70,8 @@ body {
     }
 
     .btn {
-        padding: 15px 30px; /* Adjusted padding for smaller screens */
-        font-size: 14px; /* Adjusted font size for smaller screens */
+        padding: 30px 60px; /* Adjusted padding for smaller screens */
+        font-size: 20px; /* Adjusted font size for smaller screens */
     }
 }
 
@@ -89,7 +89,7 @@ body {
     }
 
     .btn {
-        padding: 20px 40px; /* Adjusted padding for smaller screens */
-        font-size: 18px; /* Adjusted font size for smaller screens */
+        padding: 40px 80px; /* Adjusted padding for smaller screens */
+        font-size: 28px; /* Adjusted font size for smaller screens */
     }
 }
